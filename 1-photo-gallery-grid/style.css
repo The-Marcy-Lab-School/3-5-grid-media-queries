@@ -130,7 +130,7 @@ footer {
     grid-auto-rows: 1fr;
 
     /* new rows will have height === 20% of viewport width */
-    grid-auto-rows: 20vw;
+    grid-auto-rows: 40vw;
   }
 }
 
