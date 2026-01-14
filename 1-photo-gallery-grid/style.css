@@ -34,7 +34,7 @@ body {
   line-height: 1.5;
   color: var(--color-dark);
   background-color: var(--color-white);
-  
+
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -72,26 +72,14 @@ nav>a:hover {
 ** Main
 ********************/
 
-main {
-  display: grid;
-
-  grid-template-columns: min-content;
-  grid-template-areas:
-    'heading heading'
-    'sidebar gallery';
-  gap: 20px;
-
-}
-
 h1 {
   font-size: 2rem;
-  grid-area: heading;
   text-align: center;
 }
 
-#sidebar {
-  grid-area: sidebar;
-  padding-right: 20px;
+#photos-section {
+  display: flex;
+  gap: 20px;
 }
 
 #sidebar>ul {
@@ -106,12 +94,9 @@ h1 {
 }
 
 #photos-grid {
-  /* This is a part of the main grid layout */
-  grid-area: gallery;
-
-  /* AND it is a grid container for the pictures */
   display: grid;
   gap: 0.5rem;
+  flex: 1;
 }
 
 #photos-grid img {
