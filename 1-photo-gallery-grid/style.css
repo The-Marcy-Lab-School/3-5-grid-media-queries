@@ -100,10 +100,11 @@ h1 {
 }
 
 #photos-grid img {
-  /* Make the photos the same size and shape */
-  height: 100%;
-  object-fit: cover;
   border-radius: 8px;
+  /* Stretch each photo to fill the row */
+  height: 100%;
+  /* But crop the image to maintain the aspect ratio */
+  object-fit: cover;
 }
 
 /********************
@@ -123,13 +124,8 @@ footer {
 /* Media Queries allow us to apply different styles for different "breakpoints" */
 @media (min-width: 576px) {
   #photos-grid {
-    /* 2 equal sized columns, taking up the full size of their container*/
     grid-template-columns: 1fr 1fr;
 
-    /* new rows will be the same size */
-    grid-auto-rows: 1fr;
-
-    /* new rows will have height === 20% of viewport width */
     grid-auto-rows: 40vw;
   }
 }
