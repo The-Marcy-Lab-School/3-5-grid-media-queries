@@ -80,7 +80,6 @@ main {
     'heading heading'
     'sidebar gallery';
   gap: 20px;
-
 }
 
 h1 {
@@ -145,18 +144,12 @@ footer {
     grid-auto-rows: 1fr;
 
     /* new rows will have height === 20% of viewport width */
-    grid-auto-rows: 20vw;
+    grid-auto-rows: 40vw;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   #photos-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (min-width: 992px) {
-  #photos-grid {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
