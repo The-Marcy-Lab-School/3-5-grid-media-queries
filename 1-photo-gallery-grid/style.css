@@ -1,5 +1,5 @@
 /*************
-** Color Palette
+** Variables
 *************/
 
 :root {
@@ -8,6 +8,7 @@
   --color-header: #f1f1f1;
   --font-family: Helvetica, Arial, sans-serif;
   --font-logo: Avenir;
+  --max-width: 1200px;
 }
 
 /*************

@@ -1,0 +1,119 @@
+/*************
+** Variables
+*************/
+
+:root {
+  --color-dark: #2c3e50;
+  --color-white: #fff;
+  --color-header: #f1f1f1;
+  --font-family: Helvetica, Arial, sans-serif;
+  --font-logo: Avenir;
+  --max-width: 1200px;
+}
+
+/*************
+** CSS Resets
+*************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* As a best practice, put your images inside of a container, like a <li> or a <div> and use these styles. */
+img {
+  width: 100%;
+}
+
+/********************
+** Body
+********************/
+
+body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+/********************
+** Header
+********************/
+
+header {
+  font-size: 1.3rem;
+  background-color: var(--color-header);
+
+  /* Add layout and spacing */
+}
+
+
+nav {
+  /* Add layout and spacing */
+}
+
+#logo {
+  font-size: 2rem;
+  font-family: var(--font-logo);
+}
+
+nav a {
+  color: var(--color-dark);
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+/********************
+** Main
+********************/
+
+/* Layout and Spacing */
+
+main {}
+
+#photos-section {}
+
+#sidebar ul {}
+
+#photos-grid {}
+
+
+/* Additional Styles */
+
+#sidebar li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#photos-grid img {
+  border-radius: 8px;
+
+  /* Make the images square */
+  aspect-ratio: 1;
+
+  /* But crop the image rather than distorting it */
+  object-fit: cover;
+}
+
+/********************
+** Footer
+********************/
+
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+/*****************
+** Media Queries
+*****************/
+
+/* Media Queries allow us to apply different styles for different "breakpoints" */
