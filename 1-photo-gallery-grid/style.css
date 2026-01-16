@@ -78,6 +78,8 @@ nav a:hover {
 ********************/
 
 main {
+  max-width: 1200px;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
