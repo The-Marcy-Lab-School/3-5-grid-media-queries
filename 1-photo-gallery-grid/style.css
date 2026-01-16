@@ -5,6 +5,9 @@
 :root {
   --color-dark: #2c3e50;
   --color-white: #fff;
+  --color-header: #f1f1f1;
+  --font-family: Helvetica, Arial, sans-serif;
+  --font-logo: Avenir;
 }
 
 /*************
@@ -30,15 +33,10 @@ img {
 ********************/
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--font-family);
   line-height: 1.5;
   color: var(--color-dark);
   background-color: var(--color-white);
-
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
 }
 
 
@@ -51,6 +49,13 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  background-color: var(--color-header);
+}
+
+#logo {
+  font-size: 2rem;
+  font-family: var(--font-logo);
 }
 
 nav {
@@ -58,12 +63,12 @@ nav {
   gap: 1rem;
 }
 
-nav>a {
+nav a {
   color: var(--color-dark);
   text-decoration: none;
 }
 
-nav>a:hover {
+nav a:hover {
   text-decoration: underline;
 }
 
@@ -76,40 +81,38 @@ main {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-h1 {
-  font-size: 2rem;
-  text-align: center;
+  padding: 20px;
 }
 
 #photos-section {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
-#sidebar>ul {
+#sidebar ul {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
-#sidebar>ul>li:hover {
+#sidebar li:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
 #photos-grid {
   display: grid;
-  gap: 0.5rem;
+  gap: 20px;
   flex: 1;
 }
 
 #photos-grid img {
   border-radius: 8px;
-  /* Stretch each photo to fill the row */
-  height: 100%;
-  /* But crop the image to maintain the aspect ratio */
+
+  /* Make the images square */
+  aspect-ratio: 1;
+
+  /* But crop the image rather than distorting it */
   object-fit: cover;
 }
 
@@ -118,7 +121,6 @@ h1 {
 ********************/
 
 footer {
-  font-size: 1.3rem;
   padding: 1rem;
   text-align: center;
 }
@@ -131,8 +133,6 @@ footer {
 @media (min-width: 576px) {
   #photos-grid {
     grid-template-columns: 1fr 1fr;
-
-    grid-auto-rows: 40vw;
   }
 }
 
